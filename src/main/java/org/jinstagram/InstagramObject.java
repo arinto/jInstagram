@@ -14,6 +14,7 @@ import org.jinstagram.http.APILimitUtils;
 public abstract class InstagramObject implements InstagramResponse{
 	
 	private Map<String, String> headers;
+	private String rawBody;
 	
 	/**
 	 * Package-private method so that Instagram can set HTTP headers 
@@ -31,6 +32,22 @@ public abstract class InstagramObject implements InstagramResponse{
 	 */
 	public Map<String, String> getHeaders(){
 		return this.headers;
+	}
+	
+	/**
+     * Package-private method so that Instagram can set the raw body of the response 
+	 * @param rawBody the raw body of the response
+	 */
+	void setRawBody(String rawBody) {
+	    this.rawBody = rawBody;
+	}
+	
+	/**
+	 * Get the raw body of the response
+	 * @return raw body of the response
+	 */
+	public String getRawBody() {
+	    return this.rawBody;
 	}
 	
 	/**

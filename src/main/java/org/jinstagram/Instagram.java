@@ -786,6 +786,7 @@ public class Instagram {
             if (response.getCode() >= 200 && response.getCode() < 300) {
                 T object = createObjectFromResponse(clazz, response.getBody());
                 object.setHeaders(response.getHeaders());
+                object.setRawBody(response.getBody());
                 return object;
             }
 
