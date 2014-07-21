@@ -1,7 +1,6 @@
 package org.jinstagram;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonSyntaxException;
 import org.jinstagram.auth.model.OAuthRequest;
 import org.jinstagram.entity.common.InstagramErrorResponse;
 import org.jinstagram.entity.oembed.OembedInformation;
